@@ -279,7 +279,7 @@
                     $(window.document).on('click.colorpicker', $.proxy(function(e) {
                         var _t = $(e.target);
                         if ((!_t.hasClass('colorpicker-element')  ||
-                            (_t.hasClass('colorpicker-element') && !_t.is(this.element))) && (_t.parents('.colorpicker-popover').length === 0)) {
+                                (_t.hasClass('colorpicker-element') && !_t.is(this.element))) && (_t.parents('.colorpicker-popover').length === 0)) {
                             this.hide();
                         }
                         e.stopPropagation();

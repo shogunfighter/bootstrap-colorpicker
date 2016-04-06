@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         uglify: {
             distMin: {
                 options: {
-                    compress: true,
+                    compress: {},
                     beautify: false
                 },
                 files: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    compress: false,
+                    compress: {},
                     beautify: true
                 },
                 files: {
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         },
         clean: {
             dist: [
-                'dist/css',
+                'dist/css/*',
                 'dist/js/*.js'
             ]
         }
