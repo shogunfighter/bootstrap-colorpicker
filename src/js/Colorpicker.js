@@ -144,7 +144,9 @@ class Colorpicker {
 
           $btn.on('mousedown.colorpicker touchstart.colorpicker', function (event) {
             event.preventDefault();
-            colorpicker.setValue($(this).data('alias'));
+            colorpicker.setValue(
+                colorpicker.format === 'alias' ? $(this).data('alias') : $(this).css('background-color')
+            );
           });
           selectorsContainer.append($btn);
         });
