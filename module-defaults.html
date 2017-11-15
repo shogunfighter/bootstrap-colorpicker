@@ -1,22 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>defaults - Documentation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <script src="scripts/prettify/prettify.js"></script>
-    <script src="scripts/prettify/lang-css.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+  <title>Bootstrap Colorpicker | defaults - Documentation</title>
+  
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+  <link href="dist/css/bootstrap-colorpicker.css" rel="stylesheet">
+
+  <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+  <style>
+    /* TODO: Move into an external CSS file */
+
+    h4.name {
+      color: #c7254e;
+    }
+
+    .details + h5 {
+      /*display: inline-block;*/
+      /*font-size:14px;*/
+      display: none;
+    }
+
+    .details + h5 + ul {
+      /*display: inline-block;*/
+      /*list-style: none;*/
+      /*font-size: 14px;*/
+      display: none;
+    }
+
+    .nav-item-name {
+      font-size: 13px;
+    }
+
+
+    h1.page-title {
+      border: none;
+    }
+
+    .panel-heading h2 {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    .tutorial .panel-body {
+      padding: 20px 30px 35px 30px;
+    }
+
+    .tutorial-group-description, .tutorial-description {
+      margin-bottom: 20px;
+    }
+
+    .panel-footer pre.tutorial-code {
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      margin: 0;
+      background: none;
+    }
+
+    .panel-footer--legend {
+      font-size: 80%;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #bbb;
+      margin-bottom: 5px;
+    }
+
+    input.form-control + input.form-control,
+    .colorpicker-component + .colorpicker-component,
+    input.form-control + .colorpicker-component,
+    .colorpicker-component + input.form-control {
+      margin-top: 20px;
+    }
+  </style>
+
+  <script src="//code.jquery.com/jquery-3.2.1.js"></script>
+  <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+  <script src="dist/js/bootstrap-colorpicker.js"></script>
+
+  <script src="scripts/prettify/prettify.js"></script>
+  <script src="scripts/prettify/lang-css.js"></script>
 </head>
 <body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<input type="checkbox" id="nav-trigger" class="nav-trigger"/>
 <label for="nav-trigger" class="navicon-button x">
   <div class="navicon"></div>
 </label>
@@ -24,15 +99,15 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-01_basic.html">Simple input field</a></li><li class="nav-item"><a href="tutorial-02_component.html">As a component</a></li><li class="nav-item"><a href="tutorial-03_component_options.html">With custom options</a></li><li class="nav-item"><a href="tutorial-04_events.html">Working with events</a></li><li class="nav-item"><a href="tutorial-05_transparent.html">Transparent color support</a></li><li class="nav-item"><a href="tutorial-06_horizontal.html">Horizontal mode</a></li><li class="nav-item"><a href="tutorial-07_inline.html">Inline mode</a></li><li class="nav-item"><a href="tutorial-08_palette.html">Aliased color palette</a></li><li class="nav-item"><a href="tutorial-09_size.html">Customized widget size</a></li><li class="nav-item"><a href="tutorial-10_disabled.html">Disabled / enabled status</a></li><li class="nav-item"><a href="tutorial-11_modal.html">Inside a modal</a></li><li class="nav-item"><a href="tutorial-legacy_docs.html">v2.x Documentation</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html">Colorpicker</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#createColor">createColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getColorString">getColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getCssColorString">getCssColorString</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Color-Color.html">Color</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#_validOrFallback">_validOrFallback</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getCopy">getCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getHueOnlyCopy">getHueOnlyCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getOpaqueCopy">getOpaqueCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#hasTransparency">hasTransparency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importColor">importColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importHsv">importHsv</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importRgb">importRgb</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#isTransparent">isTransparent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setAlphaRatio">setAlphaRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightness">setBrightness</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightnessRatio">setBrightnessRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHue">setHue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHueRatio">setHueRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturation">setSaturation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturationRatio">setSaturationRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#toString">toString</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Color.html">Color</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Colorpicker.html">Colorpicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-defaults.html">defaults</a></span></li>
+  <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-01_Basics.html">Getting started</a></li><li class="nav-item"><a href="tutorial-02_Events.html">Working with events</a></li><li class="nav-item"><a href="tutorial-03_CustomSize.html">Custom widget size</a></li><li class="nav-item"><a href="tutorial-legacy_docs.html">Legacy Documentation</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html">Colorpicker</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#change">change</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#createColor">createColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#destroy">destroy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#disable">disable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#enable">enable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getColorString">getColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getCssColorString">getCssColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getPaletteColor">getPaletteColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getPaletteColorName">getPaletteColorName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getValue">getValue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hasColor">hasColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hasInput">hasInput</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hide">hide</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#isDisabled">isDisabled</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#keyup">keyup</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mousedown">mousedown</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mousemove">mousemove</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mouseup">mouseup</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#reposition">reposition</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#setValue">setValue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#show">show</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#update">update</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updateComponent">updateComponent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updateInput">updateInput</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updatePicker">updatePicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Color-Color.html">Color</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#_validOrFallback">_validOrFallback</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getCopy">getCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getHueOnlyCopy">getHueOnlyCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getOpaqueCopy">getOpaqueCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#hasTransparency">hasTransparency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importColor">importColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importHsv">importHsv</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importRgb">importRgb</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#isTransparent">isTransparent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setAlphaRatio">setAlphaRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightness">setBrightness</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightnessRatio">setBrightnessRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHue">setHue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHueRatio">setHueRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturation">setSaturation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturationRatio">setSaturationRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#toString">toString</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Color.html">Color</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Colorpicker.html">Colorpicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-defaults.html">defaults</a></span></li><li class="nav-heading">Events</li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:change">change</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:changeColor">changeColor</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:create">create</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:destroy">destroy</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:disable">disable</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:enable">enable</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:hidePicker">hidePicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:mousemove">mousemove</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:showPicker">showPicker</a></span></li>
 </nav>
 
 <div id="main">
-    
-    <h1 class="page-title">defaults</h1>
-    
+  
+  <h1 class="page-title">defaults</h1>
+  
 
-    
+  
 
 
 
@@ -252,7 +327,10 @@
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 14 2017 21:26:00 GMT+0100 (CET) using the Minami theme.
+  Generated by <a
+  href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+  
+  on Wed Nov 15 2017 07:07:58 GMT+0100 (CET) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

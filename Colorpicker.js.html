@@ -1,22 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Colorpicker.js - Documentation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <script src="scripts/prettify/prettify.js"></script>
-    <script src="scripts/prettify/lang-css.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+  <title>Bootstrap Colorpicker | Colorpicker.js - Documentation</title>
+  
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+  <link href="dist/css/bootstrap-colorpicker.css" rel="stylesheet">
+
+  <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+  <style>
+    /* TODO: Move into an external CSS file */
+
+    h4.name {
+      color: #c7254e;
+    }
+
+    .details + h5 {
+      /*display: inline-block;*/
+      /*font-size:14px;*/
+      display: none;
+    }
+
+    .details + h5 + ul {
+      /*display: inline-block;*/
+      /*list-style: none;*/
+      /*font-size: 14px;*/
+      display: none;
+    }
+
+    .nav-item-name {
+      font-size: 13px;
+    }
+
+
+    h1.page-title {
+      border: none;
+    }
+
+    .panel-heading h2 {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    .tutorial .panel-body {
+      padding: 20px 30px 35px 30px;
+    }
+
+    .tutorial-group-description, .tutorial-description {
+      margin-bottom: 20px;
+    }
+
+    .panel-footer pre.tutorial-code {
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      margin: 0;
+      background: none;
+    }
+
+    .panel-footer--legend {
+      font-size: 80%;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #bbb;
+      margin-bottom: 5px;
+    }
+
+    input.form-control + input.form-control,
+    .colorpicker-component + .colorpicker-component,
+    input.form-control + .colorpicker-component,
+    .colorpicker-component + input.form-control {
+      margin-top: 20px;
+    }
+  </style>
+
+  <script src="//code.jquery.com/jquery-3.2.1.js"></script>
+  <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>-->
+  <script src="dist/js/bootstrap-colorpicker.js"></script>
+
+  <script src="scripts/prettify/prettify.js"></script>
+  <script src="scripts/prettify/lang-css.js"></script>
 </head>
 <body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<input type="checkbox" id="nav-trigger" class="nav-trigger"/>
 <label for="nav-trigger" class="navicon-button x">
   <div class="navicon"></div>
 </label>
@@ -24,15 +99,15 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-01_basic.html">Simple input field</a></li><li class="nav-item"><a href="tutorial-02_component.html">As a component</a></li><li class="nav-item"><a href="tutorial-03_component_options.html">With custom options</a></li><li class="nav-item"><a href="tutorial-04_events.html">Working with events</a></li><li class="nav-item"><a href="tutorial-05_transparent.html">Transparent color support</a></li><li class="nav-item"><a href="tutorial-06_horizontal.html">Horizontal mode</a></li><li class="nav-item"><a href="tutorial-07_inline.html">Inline mode</a></li><li class="nav-item"><a href="tutorial-08_palette.html">Aliased color palette</a></li><li class="nav-item"><a href="tutorial-09_size.html">Customized widget size</a></li><li class="nav-item"><a href="tutorial-10_disabled.html">Disabled / enabled status</a></li><li class="nav-item"><a href="tutorial-11_modal.html">Inside a modal</a></li><li class="nav-item"><a href="tutorial-legacy_docs.html">v2.x Documentation</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html">Colorpicker</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#createColor">createColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getColorString">getColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getCssColorString">getCssColorString</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Color-Color.html">Color</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#_validOrFallback">_validOrFallback</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getCopy">getCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getHueOnlyCopy">getHueOnlyCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getOpaqueCopy">getOpaqueCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#hasTransparency">hasTransparency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importColor">importColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importHsv">importHsv</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importRgb">importRgb</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#isTransparent">isTransparent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setAlphaRatio">setAlphaRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightness">setBrightness</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightnessRatio">setBrightnessRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHue">setHue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHueRatio">setHueRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturation">setSaturation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturationRatio">setSaturationRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#toString">toString</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Color.html">Color</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Colorpicker.html">Colorpicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-defaults.html">defaults</a></span></li>
+  <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-01_Basics.html">Getting started</a></li><li class="nav-item"><a href="tutorial-02_Events.html">Working with events</a></li><li class="nav-item"><a href="tutorial-03_CustomSize.html">Custom widget size</a></li><li class="nav-item"><a href="tutorial-legacy_docs.html">Legacy Documentation</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html">Colorpicker</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#change">change</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#createColor">createColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#destroy">destroy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#disable">disable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#enable">enable</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getColorString">getColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getCssColorString">getCssColorString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getPaletteColor">getPaletteColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getPaletteColorName">getPaletteColorName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#getValue">getValue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hasColor">hasColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hasInput">hasInput</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#hide">hide</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#isDisabled">isDisabled</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#keyup">keyup</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mousedown">mousedown</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mousemove">mousemove</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#mouseup">mouseup</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#reposition">reposition</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#setValue">setValue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#show">show</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#update">update</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updateComponent">updateComponent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updateInput">updateInput</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Colorpicker-Colorpicker.html#updatePicker">updatePicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-Color-Color.html">Color</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#_validOrFallback">_validOrFallback</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getCopy">getCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getHueOnlyCopy">getHueOnlyCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#getOpaqueCopy">getOpaqueCopy</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#hasTransparency">hasTransparency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importColor">importColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importHsv">importHsv</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#importRgb">importRgb</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#isTransparent">isTransparent</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setAlphaRatio">setAlphaRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightness">setBrightness</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setBrightnessRatio">setBrightnessRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHue">setHue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setHueRatio">setHueRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturation">setSaturation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#setSaturationRatio">setSaturationRatio</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Color-Color.html#toString">toString</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Color.html">Color</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Colorpicker.html">Colorpicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-defaults.html">defaults</a></span></li><li class="nav-heading">Events</li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:change">change</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:changeColor">changeColor</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:create">create</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:destroy">destroy</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:disable">disable</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:enable">enable</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:hidePicker">hidePicker</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:mousemove">mousemove</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="module-Colorpicker.html#~event:showPicker">showPicker</a></span></li>
 </nav>
 
 <div id="main">
-    
-    <h1 class="page-title">Colorpicker.js</h1>
-    
+  
+  <h1 class="page-title">Colorpicker.js</h1>
+  
 
-    
+  
 
 
 
@@ -49,56 +124,97 @@ import defaults from './defaults';
 import $ from 'jquery';
 
 /**
- * Colorpicker component class
+ * Colorpicker widget class
  */
 class Colorpicker {
   /**
-   * @returns {tinycolor}
+   * Color class
+   *
+   * @static
+   * @type {Color}
    */
   static get Color() {
     return Color;
   }
 
   /**
-   * @returns {tinycolor}
+   * color getter
+   *
+   * @type {Color|null}
    */
-  static get TinyColor() {
-    return this.Color.TinyColor;
+  get color() {
+    return this.element.data('color');
   }
 
   /**
+   * color setter
+   *
+   * @ignore
+   * @param {Color|null} value
+   */
+  set color(value) {
+    this.element.data('color', value);
+  }
+
+  /**
+   * @fires create
    * @param {Object|String} element
    * @param {Object} options
    * @constructor
    */
   constructor(element, options) {
+    /**
+     * @type {*|jQuery}
+     */
     this.element = $(element).addClass('colorpicker-element');
+    /**
+     * @type {defaults}
+     */
     this.options = $.extend(true, {}, defaults, this.element.data(), options);
+    /**
+     * @type {*|jQuery}
+     */
     this.component = this.options.component;
     this.component = (this.component !== false) ? this.element.find(this.component) : false;
     if (this.component &amp;&amp; (this.component.length === 0)) {
       this.component = false;
     }
+    /**
+     * @type {*|jQuery}
+     */
     this.container = (this.options.container === true) ? this.element : this.options.container;
     this.container = (this.container !== false) ? $(this.container) : false;
+    /**
+     * @type {*|String}
+     * @private
+     */
     this.currentSlider = null;
+    /**
+     * @type {{left: number, top: number}}
+     * @private
+     */
     this.mousePointer = {
       left: 0,
       top: 0
     };
 
     // Is the element an input? Should we search inside for any input?
+    /**
+     * @type {*|jQuery}
+     */
     this.input = this.element.is('input') ? this.element : (this.options.input ?
       this.element.find(this.options.input) : false);
+
     if (this.input &amp;&amp; (this.input.length === 0)) {
       this.input = false;
     }
 
-    /**
-     * @type {Color}
-     */
     this.color = this.createColor(this.options.color !== false ? this.options.color : this.getValue());
 
+    /**
+     * @type {boolean}
+     * @private
+     */
     this.disabled = false;
 
     // Setup picker
@@ -117,7 +233,7 @@ class Colorpicker {
     }
 
     if (
-      (this.options.useAlpha || this.color.hasTransparency()) &amp;&amp;
+      (this.options.useAlpha || (this.hasColor() &amp;&amp; this.color.hasTransparency())) &amp;&amp;
       (this.options.useAlpha !== false)
     ) {
       this.options.useAlpha = true;
@@ -208,10 +324,20 @@ class Colorpicker {
     this.update(this.options.color !== false);
 
     $($.proxy(function () {
+      /**
+       * (Colorpicker) When the Colorpicker instance has been created and the DOM is ready.
+       *
+       * @event create
+       */
       this.element.trigger('create');
     }, this));
   }
 
+  /**
+   * Destroys the current instance
+   *
+   * @fires destroy
+   */
   destroy() {
     this.picker.remove();
     this.element.removeData('colorpicker', 'color').off('.colorpicker');
@@ -222,23 +348,23 @@ class Colorpicker {
       this.component.off('.colorpicker');
     }
     this.element.removeClass('colorpicker-element');
+
+    /**
+     * (Colorpicker) When the instance is destroyed with all events unbound.
+     *
+     * @event destroy
+     */
     this.element.trigger({
       type: 'destroy'
     });
   }
 
   /**
-   * @returns {Color|null}
+   * Returns true if the current color object is an instance of Color, false otherwise.
+   * @returns {boolean}
    */
-  get color() {
-    return this.element.data('color');
-  }
-
-  /**
-   * @param {Color|null} value
-   */
-  set color(value) {
-    this.element.data('color', value);
+  hasColor() {
+    return this.color instanceof Color;
   }
 
   get format() {
@@ -246,10 +372,8 @@ class Colorpicker {
       return this.options.format;
     }
 
-    if (this.color) {
-      if (this.color.hasTransparency() &amp;&amp; this.color.format.match(/^hex/)) {
-        return this.options.enableHex8 ? 'hex8' : 'rgba';
-      }
+    if (this.hasColor() &amp;&amp; this.color.hasTransparency() &amp;&amp; this.color.format.match(/^hex/)) {
+      return this.options.enableHex8 ? 'hex8' : 'rgba';
     }
 
     return null;
@@ -278,6 +402,11 @@ class Colorpicker {
     return this.color.toString(this.format);
   }
 
+  /**
+   * If the widget is not inside a container or inline, rearranges its position relative to its element offset.
+   *
+   * @returns {boolean} Returns false if the widget is inside a container or inline, true otherwise
+   */
   reposition() {
     if (this.options.inline !== false || this.options.container) {
       return false;
@@ -296,6 +425,13 @@ class Colorpicker {
     return true;
   }
 
+  /**
+   * Shows the colorpicker widget if hidden.
+   * If the input is disabled this call will be ignored.
+   *
+   * @fires showPicker
+   * @param {Event} [e]
+   */
   show(e) {
     if (this.isDisabled()) {
       // Don't show the widget if it's disabled (the input)
@@ -304,6 +440,7 @@ class Colorpicker {
     this.picker.addClass('colorpicker-visible').removeClass('colorpicker-hidden');
     this.reposition();
     $(window).on('resize.colorpicker', $.proxy(this.reposition, this));
+
     if (e &amp;&amp; (!this.hasInput() || this.input.attr('type') === 'color')) {
       if (e.stopPropagation &amp;&amp; e.preventDefault) {
         e.stopPropagation();
@@ -315,12 +452,26 @@ class Colorpicker {
         'mousedown.colorpicker': $.proxy(this.hide, this)
       });
     }
+
+    /**
+     * (Colorpicker) When show() is called and the widget can be shown.
+     *
+     * @event showPicker
+     */
     this.element.trigger({
       type: 'showPicker',
       color: this.color
     });
   }
 
+  /**
+   * Hides the colorpicker widget.
+   * Hide is prevented when it is triggered by an event whose target element has been clicked/touched.
+   *
+   * @fires hidePicker
+   * @param {Event} [e]
+   * @returns {boolean} True if hidden, false if prevented.
+   */
   hide(e) {
     if ((typeof e !== 'undefined') &amp;&amp; e.target) {
       // Prevent hide if triggered by an event and an element inside the colorpicker has been clicked/touched
@@ -337,6 +488,12 @@ class Colorpicker {
       'mousedown.colorpicker': this.hide
     });
     this.update();
+
+    /**
+     * (Colorpicker) When hide() is called and the widget can be hidden.
+     *
+     * @event hidePicker
+     */
     this.element.trigger({
       type: 'hidePicker',
       color: this.color
@@ -344,36 +501,56 @@ class Colorpicker {
     return true;
   }
 
+  /**
+   * If the input element is present, it updates the value with the current color object color string.
+   * If value is set, this method fires a "change" event on the input element.
+   *
+   * @fires change
+   */
   updateInput() {
     if (this.input !== false) {
       this.input.prop('value', this.getColorString());
+
+      /**
+       * (Input) Triggered on the input element when a new color is selected.
+       *
+       * @event change
+       */
       this.input.trigger('change');
     }
   }
 
+  /**
+   * Changes the color adjustment bars using the current color object information.
+   */
   updatePicker() {
-    let sl = (this.options.horizontal === false) ? this.options.sliders : this.options.slidersHorz;
-    let icns = this.picker.find('i');
-
-    if (icns.length === 0) {
+    if (!this.hasColor()) {
       return;
     }
 
+    let vertical = (this.options.horizontal === false),
+      sl = vertical ? this.options.sliders : this.options.slidersHorz;
+
+    let saturationGuide = this.picker.find('.colorpicker-saturation .colorpicker-guide'),
+      hueGuide = this.picker.find('.colorpicker-hue .colorpicker-guide'),
+      alphaGuide = this.picker.find('.colorpicker-alpha .colorpicker-guide');
+
     let hsva = this.color.hsvaRatio;
 
-    if (this.options.horizontal === false) {
-      sl = this.options.sliders;
-      icns.eq(1).css('top', sl.hue.maxTop * (1 - hsva.h)).end()
-        .eq(2).css('top', sl.alpha.maxTop * (1 - hsva.a));
-    } else {
-      sl = this.options.slidersHorz;
-      icns.eq(1).css('left', sl.hue.maxLeft * (1 - hsva.h)).end()
-        .eq(2).css('left', sl.alpha.maxLeft * (1 - hsva.a));
+    if (hueGuide.length) {
+      hueGuide.css(vertical ? 'top' : 'left', (vertical ? sl.hue.maxTop : sl.hue.maxLeft) * (1 - hsva.h));
     }
-    icns.eq(0).css({
-      'top': sl.saturation.maxTop - hsva.v * sl.saturation.maxTop,
-      'left': hsva.s * sl.saturation.maxLeft
-    });
+
+    if (alphaGuide.length) {
+      alphaGuide.css(vertical ? 'top' : 'left', (vertical ? sl.alpha.maxTop : sl.alpha.maxLeft) * (1 - hsva.a));
+    }
+
+    if (saturationGuide.length) {
+      saturationGuide.css({
+        'top': sl.saturation.maxTop - hsva.v * sl.saturation.maxTop,
+        'left': hsva.s * sl.saturation.maxLeft
+      });
+    }
 
     this.picker.find('.colorpicker-saturation')
       .css('backgroundColor', this.color.getHueOnlyCopy().toHexString()); // we only need hue
@@ -385,7 +562,14 @@ class Colorpicker {
       .css('backgroundColor', this.color.toRgbString()); // we need all the channels
   }
 
+  /**
+   * If the component element is present, its background color is updated
+   */
   updateComponent() {
+    if (!this.hasColor()) {
+      return;
+    }
+
     if (this.component !== false) {
       let icn = this.component.find('i').eq(0);
 
@@ -401,8 +585,15 @@ class Colorpicker {
     }
   }
 
+  /**
+   * Updated the component color, the input value and the widget if a color is present.
+   *
+   * If force is true, it is updated anyway.
+   *
+   * @param {boolean} force
+   */
   update(force) {
-    if ((this.getValue(false) !== false) || (force === true)) {
+    if (this.hasColor() &amp;&amp; ((this.getValue(false) !== false) || (force === true))) {
       // Update only if the current value (from input or data) is not empty
       this.updateComponent();
       this.updateInput();
@@ -410,25 +601,53 @@ class Colorpicker {
     }
   }
 
-  getValue(defaultValue) {
+  /**
+   * Returns the color string from the input value or the 'data-color' attribute of the input or element.
+   * If empty, it returns the defaultValue parameter.
+   *
+   * @param {String|*} [defaultValue]
+   * @returns {String|*}
+   */
+  getValue(defaultValue = null) {
     defaultValue = (typeof defaultValue === 'undefined') ? this.options.fallbackColor : defaultValue;
-    let val;
+    let candidates = [], val = false;
 
     if (this.hasInput()) {
-      val = this.input.val();
-    } else {
-      val = this.element.data('color');
+      candidates.push(this.input.val());
+      candidates.push(this.input.data('color'));
     }
-    if ((val === undefined) || (val === '') || (val === null)) {
-      // if not defined or empty, return default
-      val = defaultValue;
+    candidates.push(this.element.data('color'));
+
+    candidates.map((item) => {
+      if (item &amp;&amp; (val === false)) {
+        val = item;
+      }
+    });
+
+    val = ((val === false) ? defaultValue : val);
+
+    if (val instanceof Color) {
+      return val.toString(this.format);
     }
+
     return val;
   }
 
-  setValue(val) { // set color manually
+  /**
+   * Sets the color manually
+   *
+   * @fires changeColor
+   * @param {String|Color} val
+   */
+  setValue(val) {
     this.color = this.createColor(val);
     this.update(true);
+
+    /**
+     * (Colorpicker) When the color is set programmatically with setValue().
+     *
+     * @event changeColor
+     */
     this.element.trigger({
       type: 'changeColor',
       color: this.color,
@@ -437,19 +656,19 @@ class Colorpicker {
   }
 
   /**
-   * Creates a new color using the instance options
-   * @protected
+   * Creates a new color using the widget instance options (fallbackColor, format).
+   *
    * @param {*} val
    * @returns {Color}
    */
   createColor(val) {
     val = val ? val : null;
-    let fallback = this.options.fallbackColor ? this.options.fallbackColor : (this.color ? this.color.hsva : null);
+    let fallback = this.options.fallbackColor ? this.options.fallbackColor : (this.hasColor() ? this.color.hsva : null);
 
     val = this.getPaletteColor(val, val);
     fallback = this.getPaletteColor(fallback, fallback);
 
-    let color = new Color(val, {fallbackColor: fallback, format: this.format, useNames: this.options.useNames});
+    let color = new Color(val, {fallbackColor: fallback, format: this.format});
 
     if (color.hasTransparency() &amp;&amp; !this.options.useAlpha) {
       // alpha is disabled
@@ -459,6 +678,13 @@ class Colorpicker {
     return color;
   }
 
+  /**
+   * Given a colorName (alias), returns the corresponding color code or defaultValue.
+   *
+   * @param {String} colorName
+   * @param {*} defaultValue
+   * @returns {*}
+   */
   getPaletteColor(colorName, defaultValue = null) {
     if (!(typeof colorName === 'string') || !this.options.colorPalette) {
       return defaultValue;
@@ -469,6 +695,13 @@ class Colorpicker {
     return defaultValue;
   }
 
+  /**
+   * Given a colorValue, returns the corresponding color name (alias) or defaultValue.
+   *
+   * @param {String} colorValue
+   * @param {*} defaultValue
+   * @returns {*}
+   */
   getPaletteColorName(colorValue, defaultValue = null) {
     if (!(typeof colorValue === 'string') || !this.options.colorPalette) {
       return defaultValue;
@@ -484,19 +717,39 @@ class Colorpicker {
     return defaultValue;
   }
 
+  /**
+   * Returns true if the widget has an associated input element, false otherwise
+   * @returns {boolean}
+   */
   hasInput() {
     return (this.input !== false);
   }
 
+  /**
+   * Returns true if this instance is disabled
+   * @returns {boolean}
+   */
   isDisabled() {
-    return this.disabled;
+    return this.disabled === true;
   }
 
+  /**
+   * Disables the widget and the input if any
+   *
+   * @fires disable
+   * @returns {boolean}
+   */
   disable() {
     if (this.hasInput()) {
       this.input.prop('disabled', true);
     }
     this.disabled = true;
+
+    /**
+     * (Colorpicker) When the widget has been disabled.
+     *
+     * @event disable
+     */
     this.element.trigger({
       type: 'disable',
       color: this.color,
@@ -505,11 +758,23 @@ class Colorpicker {
     return true;
   }
 
+  /**
+   * Enables the widget and the input if any
+   *
+   * @fires enable
+   * @returns {boolean}
+   */
   enable() {
     if (this.hasInput()) {
       this.input.prop('disabled', false);
     }
     this.disabled = false;
+
+    /**
+     * (Colorpicker) When the widget has been enabled.
+     *
+     * @event enable
+     */
     this.element.trigger({
       type: 'enable',
       color: this.color,
@@ -518,6 +783,13 @@ class Colorpicker {
     return true;
   }
 
+  /**
+   * Function triggered when clicking in one of the color adjustment bars
+   *
+   * @fires mousemove
+   * @param {Event} e
+   * @returns {boolean}
+   */
   mousedown(e) {
     if (!e.pageX &amp;&amp; !e.pageY &amp;&amp; e.originalEvent &amp;&amp; e.originalEvent.touches) {
       e.pageX = e.originalEvent.touches[0].pageX;
@@ -545,14 +817,20 @@ class Colorpicker {
       let offset = zone.offset();
       // reference to guide's style
 
-      this.currentSlider.guide = zone.find('i')[0].style;
+      this.currentSlider.guide = zone.find('.colorpicker-guide')[0].style;
       this.currentSlider.left = e.pageX - offset.left;
       this.currentSlider.top = e.pageY - offset.top;
       this.mousePointer = {
         left: e.pageX,
         top: e.pageY
       };
-      // trigger mousemove to move the guide to the current position
+
+      /**
+       * (window.document) Triggered on mousedown for the document object,
+       * so the color adjustment guide is moved to the clicked position.
+       *
+       * @event mousemove
+       */
       $(window.document).on({
         'mousemove.colorpicker': $.proxy(this.mousemove, this),
         'touchmove.colorpicker': $.proxy(this.mousemove, this),
@@ -563,7 +841,18 @@ class Colorpicker {
     return false;
   }
 
+  /**
+   * Function triggered when dragging a guide inside one of the color adjustment bars.
+   *
+   * @fires changeColor
+   * @param {Event} e
+   * @returns {boolean}
+   */
   mousemove(e) {
+    if (!this.hasColor()) {
+      return null;
+    }
+
     if (!e.pageX &amp;&amp; !e.pageY &amp;&amp; e.originalEvent &amp;&amp; e.originalEvent.touches) {
       e.pageX = e.originalEvent.touches[0].pageX;
       e.pageY = e.originalEvent.touches[0].pageY;
@@ -596,6 +885,11 @@ class Colorpicker {
 
     this.update(true);
 
+    /**
+     * (Colorpicker) When the color guides have been dragged.
+     *
+     * @event changeColor
+     */
     this.element.trigger({
       type: 'changeColor',
       color: this.color
@@ -603,6 +897,12 @@ class Colorpicker {
     return false;
   }
 
+  /**
+   * Function triggered when releasing the click in one of the color adjustment bars.
+   *
+   * @param {Event} e
+   * @returns {boolean}
+   */
   mouseup(e) {
     e.stopPropagation();
     e.preventDefault();
@@ -615,16 +915,35 @@ class Colorpicker {
     return false;
   }
 
+  /**
+   * Function triggered when the input has changed, so the colorpicker gets updated.
+   *
+   * @param {Event} e
+   * @returns {boolean}
+   */
   change(e) {
     this.keyup(e);
   }
 
+  /**
+   * Function triggered after a keyboard key has been released.
+   *
+   * @fires changeColor
+   * @param {Event} e
+   * @returns {boolean}
+   */
   keyup(e) {
     this.color = this.createColor(this.input.val());
     if (this.getValue(false) !== false) {
       this.updateComponent();
       this.updatePicker();
     }
+
+    /**
+     * (Colorpicker) When a keyboard key has been released.
+     *
+     * @event changeColor
+     */
     this.element.trigger({
       type: 'changeColor',
       color: this.color,
@@ -646,7 +965,10 @@ export default Colorpicker;
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 14 2017 21:26:00 GMT+0100 (CET) using the Minami theme.
+  Generated by <a
+  href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+  
+  on Wed Nov 15 2017 07:07:58 GMT+0100 (CET) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
